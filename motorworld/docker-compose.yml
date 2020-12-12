@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: 'mysql:latest'
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: microDB
+      MYSQL_USER: user-moto
+      MYSQL_PASSWORD: pass-moto
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+
+  motorworld-service:
+    build: .
+    container_name: moto-service-container
+    ports: 
+      - 8070:8070
+volumes:
+    db_data: {}
