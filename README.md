@@ -1,2 +1,2 @@
 # motorworld
-Sample project for using Spring boot with MYSQL on containerized environment
+An example of how can we use MySQL along with Spring boot using docker-compose
