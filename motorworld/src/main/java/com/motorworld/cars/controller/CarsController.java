@@ -31,7 +31,7 @@ public class CarsController
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, path = "/cars")
-	public void saveCar(Car car)
+	public void saveCar(@RequestBody Car car)
 	{
 		carService.saveCar(car);
 	}
