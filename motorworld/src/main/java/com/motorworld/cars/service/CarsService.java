@@ -15,22 +15,27 @@ public class CarsService
 	@Autowired
 	private CarsRepository carsRepo;
 	
+	/**
+	 * This method returns all instances of cars in the system
+	 * 
+	 * @return
+	 */
 	public List<Car> getAllCars()
 	{
 		List<Car> cars = new ArrayList<>();
 		carsRepo.findAll().forEach(car -> {
 			cars.add(car);
 		});
-		
-		/*
-		 * Car c = new Car();
-		 * 
-		 * c.setId(1); c.setName("Audi"); cars.add(c);
-		 */
-		
+
 		return cars;
 	}
 	
+	/**
+	 * This method save instance of the car
+	 * 
+	 * @param car
+	 * @return
+	 */
 	public int saveCar(Car car)
 	{
 		Car c = carsRepo.save(car);
@@ -38,16 +43,31 @@ public class CarsService
 		return c.getId();
 	}
 	
-	public void updateCar(Car c)
+	/**
+	 * This method is used to update an existing object of car
+	 * @param car
+	 */
+	public void updateCar(Car car)
 	{
-		carsRepo.save(c);
+		carsRepo.save(car);
 	}
 	
+	
+	/**
+	 * Call this method to delete the instance of Car
+	 * @param id
+	 */
 	public void deleteCar(int id)
 	{
 		carsRepo.deleteById(id);
 	}
 
+	/**
+	 * This method is used to get an instance of Car
+	 * 
+	 * @param id
+	 * @return
+	 */
 	public Car getCar(int id) 
 	{
 		return carsRepo.findById(id).get();
