@@ -21,6 +21,14 @@ Just test the instance by doing some requests to application
 
 2. Create new car instance 
 
+        curl --location --request POST 'http://localhost:8070/cars/1' \
+        --header 'Content-Type: application/json' \
+        --data-raw '{
+                "name": "Audi"
+        }'
+
+3. Update an instance 
+
         curl --location --request PUT 'http://localhost:8070/cars/1' \
         --header 'Content-Type: application/json' \
         --data-raw '{
@@ -28,7 +36,7 @@ Just test the instance by doing some requests to application
                 "name": "Audi"
         }'
  
- 3. Delete a car instance with id 1
+ 4. Delete a car instance with id 1
  
         curl --location --request DELETE 'http://localhost:8070/cars/1'
  # Database
