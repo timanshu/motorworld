@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.motorworld.cars.data.CarsRepository;
+import com.motorworld.cars.exception.CarNotFoundException;
 import com.motorworld.cars.model.Car;
 
 @Service
@@ -45,11 +48,19 @@ public class CarsService
 	
 	/**
 	 * This method is used to update an existing object of car
+	 * @param id 
 	 * @param car
+	 * @return 
 	 */
-	public void updateCar(Car car)
+	public void updateCar(int id, Car car)
 	{
-		carsRepo.save(car);
+		car.setId(id);
+		if(carsRepo.existsById(id))
+			carsRepo.save(car);
+		else
+		{
+			throw new CarNotFoundException("Instance of Car with id " + id + " does not exist");
+		}
 	}
 	
 	
