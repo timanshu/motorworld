@@ -51,9 +51,9 @@ public class CarsController
 	 * @param car
 	 */
 	@RequestMapping(method = RequestMethod.POST, path = "/cars")
-	public void saveCar(@RequestBody Car car)
+	public int saveCar(@RequestBody Car car)
 	{
-		carService.saveCar(car);
+		return carService.saveCar(car);
 	}
 	
 	/**
@@ -65,7 +65,7 @@ public class CarsController
 	@RequestMapping(method=RequestMethod.PUT, value="/cars/{id}")
 	public void updateCar(@PathVariable int id, @RequestBody Car car)
 	{
-		carService.saveCar(car);
+		carService.updateCar(id, car);
 	}
 	
 	/**
