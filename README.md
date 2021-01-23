@@ -13,6 +13,8 @@ In order to get the application running all you need to do is:
 # The application
 The containers are up. Application can be accessible at localhost:8070.
 
+You can find the api-doc for the service at http://localhost:8070/swagger-ui.html
+
 Just test the instance by doing some requests to application
 
 1. Get all records:
