@@ -1,5 +1,0 @@
-com\motorworld\cars\controller\CarsController.class
-com\motorworld\cars\MotorworldApplication.class
-com\motorworld\cars\service\CarsService.class
-com\motorworld\cars\data\CarsRepository.class
-com\motorworld\cars\model\Car.class
