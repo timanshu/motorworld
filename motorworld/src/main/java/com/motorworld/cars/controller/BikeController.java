@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.motorworld.bike.model.Bike;
-import com.motorworld.bike.service.BikeService;
+import com.motorworld.cars.model.Bike;
+import com.motorworld.cars.service.BikeService;
 
 import io.swagger.v3.oas.annotations.Operation;
 

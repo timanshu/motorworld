@@ -8,9 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.motorworld.bike.data.BikeRepository;
-import com.motorworld.bike.exception.BikeNotFoundException;
-import com.motorworld.bike.model.Bike;
+import com.motorworld.cars.data.BikeRepository;
+import com.motorworld.cars.exception.BikeNotFoundException;
+import com.motorworld.cars.model.Bike;
 
 @Service
 public class BikeService 
@@ -25,12 +25,12 @@ public class BikeService
 	 */
 	public List<Bike> getAllBike()
 	{
-		List<Bike> bike = new ArrayList<>();
+		List<Bike> bikes = new ArrayList<>();
 		bikeRepo.findAll().forEach(bike -> {
-			bike.add(bike);
+			bikes.add(bike);
 		});
 
-		return bike;
+		return bikes;
 	}
 	
 	/**
