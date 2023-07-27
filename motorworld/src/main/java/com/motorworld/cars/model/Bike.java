@@ -12,6 +12,7 @@ public class Bike
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
+	private String companyName;
 	
 	public int getId() {
 		return id;
@@ -24,5 +25,11 @@ public class Bike
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getCompanyName() {
+		return companyName;
+	}
+	public void setCompnayName(String companyName) {
+		this.companyName = companyName;
 	}
 }
