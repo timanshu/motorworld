@@ -3,10 +3,10 @@ package com.motorworld.cars.data;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.motorworld.cars.model.Car;
+import com.motorworld.bike.model.Bike;
 
 @Repository
-public interface CarsRepository extends CrudRepository<Car, Integer>
+public interface BikeRepository extends CrudRepository<Bike, Integer>
 {
 
 }
