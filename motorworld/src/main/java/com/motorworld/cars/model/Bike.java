@@ -12,6 +12,7 @@ public class Bike
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
+	private String company;
 	
 	public int getId() {
 		return id;
